@@ -32,7 +32,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		Ball ball; 				// TODO: Create a new ball object and assign it to the appropriate variable  //COMPLETED
 		Paddle paddle;  		// TODO: Create a new paddle object and assign it to the appropriate variable	//COMPLETED
 		bricks = new Brick[Settings.TOTAL_BRICKS];  // TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)		//COMPLETED
-		createBricks(); // TODO: Call the createBricks() method
+		createBricks(); // TODO: Call the createBricks() method		//COMPLETED
 	}
 	
 	private void createBricks() {
@@ -60,6 +60,8 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	private void update() {
 		if(gameRunning) {
 			// TODO: Update the ball and paddle
+			ball.setXVelocity(1);				//set xVelocity as 1
+			ball.setYVelocity(-1);				//set yVelocity as 1
 			
 			collisions();
 			repaint();
@@ -166,13 +168,22 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
     }
 
 	@Override
-	public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent event) {
 		// TODO: Set the velocity of the paddle depending on whether the player is pressing left or right
+		if(event.getKeyCode() == KeyEvent.VK_LEFT) {
+			paddle.setXVelocity(-3);
+		}
+		else if(event.getKeyCode() == KeyEvent.VK_RIGHT) {		//key pressed events created
+			paddle.setXVelocity(3);
+		}
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(KeyEvent event) {
 		// TODO: Set the velocity of the paddle after the player has released the keys
+		if(event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_RIGHT) {		//paddle speed set to 0 once key is released
+			paddle.setXVelocity(0);
+		}
 	}
 
 	@Override

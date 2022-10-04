@@ -30,6 +30,6 @@ public class Paddle extends Sprite {
 	}
 	
 	public void setXVelocity(int vel) {
-		// TODO: Set x velocity
+		vel = this.xVelocity;  // TODO: Set x velocity //COMPLETED
 	}
 }

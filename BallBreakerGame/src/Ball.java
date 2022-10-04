@@ -27,10 +27,10 @@ public class Ball extends Sprite {
 		y += yVelocity;  // TODO: Increase the y variable by yVelocity (see above)		//COMPLETED
 		
 		// Bounce off left side of screen
-		if(x <= 0) {
+		if(x <= 0) {				//I think x is equal to the position of the ball 
 			// TODO: Set x to 0 so it does not leave the screen
 			// TODO: Change the x velocity to make the ball go right
-			
+			setXVelocity(xVelocity);
 			
 		}
 		
@@ -38,12 +38,14 @@ public class Ball extends Sprite {
 		if(x >= Settings.WINDOW_WIDTH - Settings.BALL_WIDTH) {
 			// TODO: Set x to the right edge of the screen (see the above if condition)
 			// TODO: Change the x velocity to make the ball go left
+			setXVelocity(-xVelocity);
 		}
 		
 		// Bounce off top of screen
 		if(y <= 0) {
 			// TODO: Set y to 0 so it does not leave the screen
 			// TODO: Change the y velocity to make the ball go downward
+			setYVelocity(-yVelocity);
 		}
 		
 	}
