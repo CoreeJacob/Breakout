@@ -6,15 +6,16 @@ public class Sprite {
 	
 	// Note: This should only set a single value, they can be done in a single statement
 	public void setX(int x) {
+		x = this.x;
 	}
 	public void setY(int y) { 
-		// TODO
+		y = this.y;  // TODO
 	}
 	public void setWidth(int width) { 
-		// TODO
+		width = this.width;  // TODO
 	}
 	public void setHeight(int height) { 
-		// TODO
+		height = this.height;  // TODO
 	}
 	
 	// Note: Change the "0" to the correct variable

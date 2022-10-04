@@ -3,12 +3,13 @@ import java.awt.Graphics;
 public class Ball extends Sprite {
 
 	private int xVelocity = 1, yVelocity = -1;
+	private int ballWidth, ballHeight;
 	
 	// Constructor
 	public Ball() {
-		// TODO: Set width to Settings.BALL_WIDTH
-		// TODO: Set width to Settings.BALL_HEIGHT
-		// TODO: Call resetPosition
+		ballWidth = Settings.BALL_WIDTH;  // TODO: Set width to Settings.BALL_WIDTH		//COMPLETED
+		ballHeight = Settings.BALL_HEIGHT;  // TODO: Set width to Settings.BALL_HEIGHT	//COMPLETED
+		resetPosition();  // TODO: Call resetPosition									//COMPLETED
 	}
 	
 	/**
@@ -17,17 +18,20 @@ public class Ball extends Sprite {
 	 */
 	public void resetPosition() {
 		setX(Settings.INITIAL_BALL_X);
-		// TODO: Set the balls y by using the INITIAL_BALL_Y (see above)
+		setY(Settings.INITIAL_BALL_Y);  // TODO: Set the balls y by using the INITIAL_BALL_Y (see above)   //COMPLETED
 	}
 	
-	public void update() {
+	public void update() {						//FOR SELF - DELETE
+												//NEED TO COMPLETE FROM HERE
 		x += xVelocity;
-		// TODO: Increase the y variable by yVelocity (see above)
+		y += yVelocity;  // TODO: Increase the y variable by yVelocity (see above)		//COMPLETED
 		
 		// Bounce off left side of screen
 		if(x <= 0) {
 			// TODO: Set x to 0 so it does not leave the screen
 			// TODO: Change the x velocity to make the ball go right
+			
+			
 		}
 		
 		// Bounce off right side of screen
@@ -45,17 +49,17 @@ public class Ball extends Sprite {
 	}
 	
 	public void setXVelocity(int x) {
-		// TODO: Set the x velocity
+		xVelocity = this.xVelocity;  // TODO: Set the x velocity	//COMPLETED
 	}
 	public void setYVelocity(int y) {
-		// TODO: Set the y velocity
+		yVelocity = this.yVelocity;  // TODO: Set the y velocity	//COMPLETED
 	}
 	
 	public int getXVelocity() {
-		return 0;	// TODO: Return the x velocity
+		return xVelocity;  // TODO: Return the x velocity		//COMPLETED
 	}
 	public int getYVelocity() {
-		return 0;	// TODO: Return the y velocity
+		return yVelocity;	// TODO: Return the y velocity		//COMPLETED
 	}
 	
 	public void paint(Graphics g) {

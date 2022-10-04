@@ -3,18 +3,21 @@ import java.awt.Graphics;
 public class Brick extends Sprite {
 	
 	private boolean broken = false;
+	private int brickWidth, brickHeight;		
 	
 	public Brick(int x, int y) {
-		// TODO: Set x using the parameter
-		// TODO: Set y using the parameter
-		// TODO: Set the width and height of the brick using Settings.BRICK_WIDTH/HEIGHT
+		x = 4;// TODO: Set x using the parameter		//COMPLETED??
+		y = 5;// TODO: Set y using the parameter		//COMPLETED??
+		// TODO: Set the width and height of the brick using Settings.BRICK_WIDTH/HEIGHT		//COMPLETED
+		brickWidth = Settings.BRICK_WIDTH; 
+		brickHeight = Settings.BRICK_HEIGHT;
 	}
 
 	public boolean isBroken() {
-		return false;	// TODO: Return the correct variable
+		return true;	// TODO: Return the correct variable
 	}
 	public void setBroken(boolean b) {
-		// TODO: Set the broken variable using the parameter given
+		b = this.broken;  // TODO: Set the broken variable using the parameter given
 	}
 	
 	public void paint(Graphics g) {
@@ -23,3 +26,8 @@ public class Brick extends Sprite {
 		}
 	}
 }
+
+
+//NOTES FOR COMMIT:
+//ADDED WIDTH/HEIGHT VARIABLES FOR CLASS - ADDED THE NUMBER OF BRICKS IN THE ARRAY (5 x 4)
+//
