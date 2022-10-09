@@ -20,16 +20,16 @@ public class Sprite {
 	
 	// Note: Change the "0" to the correct variable
 	public int getX() { 
-		return x;	// TODO: Return correct value
+		return x;	// TODO: Return correct value			//COMPLETED
 	}    
 	public int getY() { 
-		return y;	// TODO: Return correct value
+		return y;	// TODO: Return correct value			//COMPLETED
 	}
 	public int getWidth() { 
-		return width;	// TODO: Return correct value
+		return width;	// TODO: Return correct value		//COMPLETED
 	}
 	public int getHeight() { 
-		return height;	// TODO: Return correct value
+		return height;	// TODO: Return correct value		//COMPLETED
 	}
 	
 	Rectangle getRectangle() {
