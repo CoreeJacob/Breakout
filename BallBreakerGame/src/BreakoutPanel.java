@@ -28,11 +28,12 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 		
 		Timer timer = new Timer(5, this);
 		timer.start();
+	
+		ball = new Ball();
+		paddle = new Paddle();
+		bricks = new Brick[Settings.TOTAL_BRICKS];
 		
-		ball = new Ball();				// TODO: Create a new ball object and assign it to the appropriate variable  //COMPLETED
-		paddle = new Paddle();  		// TODO: Create a new paddle object and assign it to the appropriate variable	//COMPLETED
-		bricks = new Brick[Settings.TOTAL_BRICKS];  // TODO: Create a new bricks array (Use Settings.TOTAL_BRICKS)		//COMPLETED
-		createBricks(); // TODO: Call the createBricks() method		//COMPLETED
+		createBricks();
 	}
 	
 	private void createBricks() {
@@ -51,17 +52,15 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	}
 	
 	private void paintBricks(Graphics g) {
-		// TODO: Loop through the bricks and call the paint() method		//COMPLETED
 		for (int i = 0; i < Settings.TOTAL_BRICKS; i++) {
-		bricks[i].paint(g);
+			bricks[i].paint(g);
 		}
 	}
 	
 	private void update() {
 		if(gameRunning) {
-			// TODO: Update the ball and paddle
-			paddle.update();
 			ball.update();
+			paddle.update();
 			collisions();
 			repaint();
 		}
@@ -151,8 +150,8 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        paddle.paint(g);
         ball.paint(g);
+        paddle.paint(g);
         paintBricks(g);
         
         // Draw lives left
@@ -167,24 +166,23 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
     }
 
 	@Override
-	public void keyPressed(KeyEvent event) {
+	public void keyPressed(KeyEvent e) {
 		// TODO: Set the velocity of the paddle depending on whether the player is pressing left or right
-		if(event.getKeyCode() == KeyEvent.VK_LEFT) {
+		if(e.getKeyCode() == KeyEvent.VK_LEFT) {
 			paddle.setXVelocity(-1);
 		}
-		else if(event.getKeyCode() == KeyEvent.VK_RIGHT) {		//key pressed events created
+		else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {		//key pressed events created
 			paddle.setXVelocity(1);
 		}
 	}
 
 	@Override
-	public void keyReleased(KeyEvent event) {
+	public void keyReleased(KeyEvent e) {
 		// TODO: Set the velocity of the paddle after the player has released the keys
-		if(event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_RIGHT) {		//paddle speed set to 0 once key is released
+		if(e.getKeyCode() == KeyEvent.VK_LEFT || e.getKeyCode() == KeyEvent.VK_RIGHT) {		//paddle speed set to 0 once key is released
 			paddle.setXVelocity(0);
 		}
 	}
-
 	@Override
 	public void keyTyped(KeyEvent arg0) {
 		
