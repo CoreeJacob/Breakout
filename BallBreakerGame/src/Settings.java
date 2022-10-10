@@ -15,7 +15,7 @@ public class Settings {
 	
 
 	public static final int INITIAL_PADDLE_X = 100;
-	public static final int INITIAL_PADDLE_Y = 370;			//paddle variables incl initial start position
+	public static final int INITIAL_PADDLE_Y = 400;			//paddle variables incl initial start position
 	public static final int PADDLE_WIDTH = 100;
 	public static final int PADDLE_HEIGHT = 15;
 	

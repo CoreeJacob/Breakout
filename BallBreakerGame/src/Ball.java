@@ -38,6 +38,7 @@ public class Ball extends Sprite {
 		if(x >= Settings.WINDOW_WIDTH - Settings.BALL_WIDTH) {
 			// TODO: Set x to the right edge of the screen (see the above if condition)
 			// TODO: Change the x velocity to make the ball go left
+			
 			setXVelocity(xVelocity);
 		}
 		
@@ -65,6 +66,6 @@ public class Ball extends Sprite {
 	}
 	
 	public void paint(Graphics g) {
-		g.fillOval(x, y, Settings.BALL_WIDTH, Settings.BALL_HEIGHT);
+		g.fillOval(Settings.INITIAL_BALL_X, Settings.INITIAL_BALL_Y, Settings.BALL_WIDTH, Settings.BALL_HEIGHT);
 	}
 }

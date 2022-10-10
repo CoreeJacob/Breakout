@@ -33,7 +33,7 @@ public class Paddle extends Sprite {
 	}
 	
 	public void paint(Graphics g) {
-		g.fillRect(x, y, Settings.PADDLE_WIDTH, Settings.PADDLE_HEIGHT);
+		g.fillRect(Settings.INITIAL_PADDLE_X, Settings.INITIAL_PADDLE_Y, Settings.PADDLE_WIDTH, Settings.PADDLE_HEIGHT);
 	}
 	
 	public void setXVelocity(int vel) {
