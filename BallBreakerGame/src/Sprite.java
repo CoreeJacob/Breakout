@@ -4,7 +4,6 @@ public class Sprite {
 	
 	protected int x,y,width,height;
 	
-	// Note: This should only set a single value, they can be done in a single statement
 	public void setX(int x) {
 		this.x = x;
 	}
@@ -18,18 +17,17 @@ public class Sprite {
 		height = this.height;
 	}
 	
-	// Note: Change the "0" to the correct variable
 	public int getX() { 
-		return 0;	// TODO: Return correct value
+		return x;	
 	}
 	public int getY() { 
-		return 0;	// TODO: Return correct value
+		return y;	
 	}
 	public int getWidth() { 
-		return 0;	// TODO: Return correct value
+		return width;	
 	}
 	public int getHeight() { 
-		return 0;	// TODO: Return correct value
+		return height;	
 	}
 	
 	Rectangle getRectangle() {

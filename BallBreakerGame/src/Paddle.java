@@ -3,11 +3,10 @@ import java.awt.Graphics;
 public class Paddle extends Sprite {
 
 	private int xVelocity;
-	private int paddleWidth, paddleHeight;
 	
 	public Paddle() {
-		paddleWidth = Settings.PADDLE_WIDTH;
-		paddleHeight = Settings.PADDLE_HEIGHT;
+		setWidth(Settings.PADDLE_WIDTH);
+		setHeight(Settings.PADDLE_HEIGHT);
 		resetPosition();
 	}
 	
@@ -19,20 +18,23 @@ public class Paddle extends Sprite {
 	public void update() {
 		x += xVelocity;
 		
-		if (x >= 0) {
-			setXVelocity(0);
+		if(x <= 0) {
+			setX(0);              
 		}
-		if(x >= Settings.WINDOW_WIDTH - Settings.PADDLE_WIDTH) {
-			setXVelocity(0);
+		
+		else if(x >= Settings.WINDOW_WIDTH - Settings.PADDLE_WIDTH) {
+			setX(Settings.WINDOW_WIDTH - Settings.PADDLE_WIDTH);             
 		}
-
+		
 	}
 	
+	//painting the paddle
 	public void paint(Graphics g) {
 		g.fillRect(x, y, Settings.PADDLE_WIDTH, Settings.PADDLE_HEIGHT);
 	}
 	
 	public void setXVelocity(int vel) {
-		vel = this.xVelocity;
+		this.xVelocity = vel;
 	}
+	
 }

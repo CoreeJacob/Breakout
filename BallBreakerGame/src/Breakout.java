@@ -9,10 +9,10 @@ public class Breakout extends JFrame{
 	private BreakoutPanel panel;
 	
 	public Breakout() {
-		setSize(Settings.WINDOW_WIDTH, Settings.WINDOW_HEIGHT);  // TODO: Set the size of the screen (use Settings.WINDOW_WIDTH/HEIGHT)
-		setTitle(Settings.WINDOW_NAME);  // TODO: Set the title
-		setBackground(Color.white);  // TODO: Set the background colour to white
-		setResizable(false);  // TODO: Set resizable to false
+		setSize(Settings.WINDOW_WIDTH, Settings.WINDOW_HEIGHT);  
+		setTitle(Settings.WINDOW_NAME);  
+		setBackground(Color.white);  
+		setResizable(false);  
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         panel = new BreakoutPanel(this);
         add(panel);

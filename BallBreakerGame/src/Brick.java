@@ -3,21 +3,19 @@ import java.awt.Graphics;
 public class Brick extends Sprite {
 	
 	private boolean broken = false;
-	private int brickWidth, brickHeight;
 	
 	public Brick(int x, int y) {
 		
-		x = this.x;
-		y = this.y;
-		brickWidth = Settings.BRICK_WIDTH;
-		brickHeight = Settings.BRICK_HEIGHT;
+		setX(x);
+		setY(y);
+		setWidth(Settings.BRICK_WIDTH);
+		setHeight(Settings.BRICK_HEIGHT);
 	}
 
 	public boolean isBroken() {
-		return broken;	// TODO: Return the correct variable
+		return broken;	
 	}
 	public void setBroken(boolean b) {
-		// TODO: Set the broken variable using the parameter given
 		this.broken = b;
 		
 	}
