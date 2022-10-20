@@ -56,6 +56,7 @@ public class Ball extends Sprite {
 		return yVelocity; 
 		}
 	
+	//painting the ball
 	public void paint(Graphics g) {
 		g.fillOval(x, y, Settings.BALL_WIDTH, Settings.BALL_HEIGHT);
 	}

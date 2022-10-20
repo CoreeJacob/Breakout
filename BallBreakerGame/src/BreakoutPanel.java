@@ -62,7 +62,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 			
 			ball.update();		//calling ball and paddle to update their position in the game
 			paddle.update();
-			paddle.update();
+			paddle.update(); 
 			collisions();	
 
 			repaint();

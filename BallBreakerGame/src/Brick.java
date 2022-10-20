@@ -20,6 +20,7 @@ public class Brick extends Sprite {
 		
 	}
 	
+	//painting a brick
 	public void paint(Graphics g) {
 		if(!broken) {
 			g.fillRect(x, y, Settings.BRICK_WIDTH, Settings.BRICK_HEIGHT);
